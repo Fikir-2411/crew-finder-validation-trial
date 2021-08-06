@@ -1,5 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const { body, validationResult, checkSchema } = require('express-validator');
+const { validate } = require('./validate');
+const { registrationSchema } = require('./registrationValidation');
 
 const app = express();
 const port = 2022;

@@ -1,4 +1,4 @@
-const { body, validationResult, checkSchema } = require('express-validator');
+const { validationResult } = require('express-validator');
 
 const validate = validations => {
     return async (req, res, next) => {
@@ -14,3 +14,5 @@ const validate = validations => {
         });
     };
 };
+
+module.exports = validate;

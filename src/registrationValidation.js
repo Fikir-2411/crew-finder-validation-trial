@@ -47,3 +47,5 @@ const registrationSchema = {
     },
   },
 };
+
+module.exports = registrationSchema;
