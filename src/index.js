@@ -12,7 +12,7 @@ const port = 2022;
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json);
 
-app.post('/register', (req, res) => {
+app.post('/register',validate(checkSchema(registrationSchema)) , (req, res) => {
     res.status(200).json({
         success: true,
         message: "Registration was successful",
